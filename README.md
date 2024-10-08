@@ -31,7 +31,7 @@ $yonoma = new YonomaEmailMarketing\ApiClient('YOUR-API-KEY');
 #### Create new group
 ```php
 $response = $yonoma->groups->create([
-  "group_name" => "php sdk"
+  "group_name" => "New group"
 ]);
 ```
 #### Get list of groups
@@ -40,23 +40,23 @@ $response = $yonoma->groups->list();
 ```
 #### Get one group
 ```php
-$response = $yonoma->groups->retrieve('A0SADFD6PJ');
+$response = $yonoma->groups->retrieve('Group id');
 ```
 #### Update group
 ```php
 $response = $yonoma->groups->update('A0SADFD6PJ',[
-  "group_name" => "updated php sdk"
+  "group_name" => "Updated group name"
 ]);
 ```
 #### Delete group
 ```php
-$response = $yonoma->groups->delete('A0SADFD6PJ');
+$response = $yonoma->groups->delete('Group id');
 ```
 ## Tags
 #### Create new tag
 ```php
 $response = $yonoma->tags->create([
-  "tag_name" => "php sdk"
+  "tag_name" => "New tag"
 ]);
 ```
 #### Get list of tags
@@ -65,23 +65,23 @@ $response = $yonoma->tags->list();
 ```
 #### Get one tag
 ```php
-$response = $yonoma->tags->retrieve('I0M15VL3I7');
+$response = $yonoma->tags->retrieve('Tag id');
 ```
 #### Update tag
 ```php
-$response = $yonoma->tags->update('I0M15VL3I7',[
-        "tag_name" => "updated php sdk"
+$response = $yonoma->tags->update('Tag id',[
+        "tag_name" => "Updated tag name"
 ]);
 ```
 #### Delete tag
 ```php
-$response = $yonoma->tags->delete('I0M15VL3I7');
+$response = $yonoma->tags->delete('Tag id');
 ```
 ## Contacts
 #### Create new contact
 ```php
-$response = $yonoma->contacts->create("ZM8WD5SKSI", [
-  "email" => "contactemail2@gmail.com",
+$response = $yonoma->contacts->create("Group id", [
+  "email" => "email@example.com",
   "status" => "Subscribed" | "Unsubscribed",
   "data" => [
       "firstName" => "Contact",
@@ -97,19 +97,19 @@ $response = $yonoma->contacts->create("ZM8WD5SKSI", [
 ```
 #### Update contact
 ```php
-$response = $yonoma->contacts->update("ZM8WD5SKSI", "GN5HSWRI44", [
-  "status" => "Unsubscribed",
+$response = $yonoma->contacts->update("Group id", "Contact id", [
+  "status" => "Subscribed" | "Unsubscribed",
 ]);
 ```
 #### Add tag to contact
 ```php
-$response = $yonoma->contacts->addTag("GN5HSWRI44", [
-  "tag_id" => "ITBBBM572C",
+$response = $yonoma->contacts->addTag("Contact id", [
+  "tag_id" => "Tag id",
 ]);
 ```
 #### Remove tag from contact
 ```php
-$response = $yonoma->contacts->removeTag("GN5HSWRI44", [
-  "tag_id" => "ITBBBM572C",
+$response = $yonoma->contacts->removeTag("Contact id", [
+  "tag_id" => "Tag id",
 ]);
 ```
