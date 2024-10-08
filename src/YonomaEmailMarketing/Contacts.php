@@ -23,15 +23,15 @@ class Contacts
         return $this->client->request('POST', $endpoint, $contactData);
     }
 
-    public function addTag($tagId, $contactData)
+    public function addTag($contactId, $contactData)
     {
-        $endpoint = 'contacts/tags/' . $tagId . '/add';
+        $endpoint = 'contacts/tags/' . $contactId . '/add';
         return $this->client->request('POST', $endpoint, $contactData);
     }
 
-    public function removeTag($tagId, $contactData)
+    public function removeTag($contactId, $contactData)
     {
-        $endpoint = 'contacts/tags/' . $tagId . '/remove';
+        $endpoint = 'contacts/tags/' . $contactId . '/remove';
         return $this->client->request('POST', $endpoint, $contactData);
     }
 }
