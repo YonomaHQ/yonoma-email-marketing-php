@@ -70,7 +70,7 @@ $response = $yonoma->tags->retrieve('Tag id');
 #### Update tag
 ```php
 $response = $yonoma->tags->update('Tag id',[
-        "tag_name" => "Updated tag name"
+  "tag_name" => "Updated tag name"
 ]);
 ```
 #### Delete tag
