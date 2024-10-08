@@ -20,7 +20,7 @@ Or add the following to `composer.json`
 
 ## Quick Start
 
-### Note : This SDK requires PHP 7.2 or above.
+### Note : This SDK requires PHP 7.4 or above.
 
 ```php
 require_once('/YonomaEmailMarketing/vendor/autoload.php');
